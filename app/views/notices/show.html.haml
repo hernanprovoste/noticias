@@ -1,0 +1,29 @@
+.container
+  .imagen-detalle-noticia
+    = image_tag(@notice.image.url, class: "img-responsive")
+  .titulo-detalle-noticia
+    %h1= @notice.title
+  .previus-detalle-noticia
+    %h3= @notice.subtitle
+  .autor-detalle-noticia
+    %h4 Autor: Pepito Rodriguez.
+    %h5 Lago Ranco
+    %h5= @notice.date
+  .redes-sociales-detalle-noticia
+    %a.icon-button.twitter{:href => "#"}
+      %i.fa.fa-twitter
+      %span
+    %a.icon-button.facebook{:href => "#"}
+      %i.fa.fa-facebook
+      %span
+    %a.icon-button.google-plus{:href => "#"}
+      %i.fa.fa-google-plus
+      %span
+    %a.icon-button.linkedin{:href => "#"}
+      %i.fa.fa-linkedin
+      %span
+    %a.icon-button.instagram{:href => "#"}
+      %i.fa.fa-instagram
+      %span
+  .cuerpo-detalle-noticia
+    %p= @notice.body

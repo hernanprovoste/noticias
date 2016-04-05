@@ -1,0 +1,23 @@
+%h1 Listing opinions
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Body
+      %th
+      %th
+      %th
+
+  %tbody
+    - @opinions.each do |opinion|
+      %tr
+        %td= opinion.title
+        %td= opinion.body
+        %td= link_to 'Show', opinion
+        %td= link_to 'Edit', edit_opinion_path(opinion)
+        %td= link_to 'Destroy', opinion, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Opinion', new_opinion_path

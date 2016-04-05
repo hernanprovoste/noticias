@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @opinion.title
+%p
+  %b Body:
+  = @opinion.body
+
+= link_to 'Edit', edit_opinion_path(@opinion)
+\|
+= link_to 'Back', opinions_path

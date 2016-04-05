@@ -1,0 +1,20 @@
+%header
+  .container
+    .col-md-5.col-sm-12.col-xs-9
+      .logos
+        %img.img-responsive.logoLetras{:alt => "enfoque-regional", :src => "../assets/logo1.png"}
+    .col-md-7.col-sm-12
+      .barra-menu
+        %nav.navbar.navbar-default
+          .container-fluid
+            .navbar-header
+              %button.navbar-toggle.collapsed{"data-target" => "#navcol-1", "data-toggle" => "collapse"}
+                %span.sr-only Toggle navigation
+                %span.icon-bar
+                %span.icon-bar
+                %span.icon-bar
+            #navcol-1.collapse.navbar-collapse
+              %ul.nav.navbar-nav
+                %li{:role => "presentation"}= link_to "Inicio", root_path
+                %li{:role => "presentation"}= link_to "Quiénes Somos", somos_path
+                %li{:role => "presentation"}= link_to "Contáctenos", contactenos_path
