@@ -1,0 +1,2 @@
+module EnsayosHelper
+end

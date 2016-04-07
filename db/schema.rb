@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160331183419) do
+ActiveRecord::Schema.define(version: 20160407023613) do
+
+  create_table "ensayos", force: :cascade do |t|
+    t.string   "titlo"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "pdf_file_name"
+    t.string   "pdf_content_type"
+    t.integer  "pdf_file_size"
+    t.datetime "pdf_updated_at"
+    t.string   "autor"
+  end
 
   create_table "notices", force: :cascade do |t|
     t.string   "title"

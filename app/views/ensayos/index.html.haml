@@ -1,0 +1,54 @@
+.container
+  .col-md-12.no-padding
+    .imagenes-page
+      %h1 Publicaciones y Ensayos
+
+  .body-publicidad
+    .col-md-4
+      .publicidad
+        %a{:href => "#"}
+          %img.img-responsive{:src => "assets/img/prueba-9-fuze-tea.jpg"}/
+    .col-md-8
+      .row
+        - @ensayos.each do |ensayo|
+          .col-md-6
+            .body-ensayos
+              %h1= link_to ensayo.titlo, "../#{ensayo.pdf}"
+              %h3= ensayo.autor
+              %h3= ensayo.created_at
+
+    .col-md-12
+      %nav
+        %ul.pagination
+          %li
+            %a{"aria-label" => "Previous"}
+              %span{"aria-hidden" => "true"} «
+          %li
+            %a 1
+          %li
+            %a 2
+          %li
+            %a 3
+          %li
+            %a 4
+          %li
+            %a 5
+          %li
+            %a{"aria-label" => "Next"}
+              %span{"aria-hidden" => "true"} »
+
+
+
+
+  %tbody
+    - @ensayos.each do |ensayo|
+      %tr
+        %td= ensayo.titlo
+        %td= link_to "Abrir", "../#{ensayo.pdf}"
+        %td= link_to 'Show', ensayo
+        %td= link_to 'Edit', edit_ensayo_path(ensayo)
+        %td= link_to 'Destroy', ensayo, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ensayo', new_ensayo_path

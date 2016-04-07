@@ -1,0 +1,13 @@
+%p#notice= notice
+
+%p
+  %b Titlo:
+  = @ensayo.titlo
+  = @ensayo.autor
+
+
+
+
+= link_to 'Edit', edit_ensayo_path(@ensayo)
+\|
+= link_to 'Back', ensayos_path

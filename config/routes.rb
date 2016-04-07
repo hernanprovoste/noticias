@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ensayos
   resources :opinions
   resources :notices
   resources :welcomes

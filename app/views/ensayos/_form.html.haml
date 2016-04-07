@@ -1,0 +1,15 @@
+= simple_form_for @ensayo, html: {multipart: true} do |f|
+  - if @ensayo.errors.any?
+    #errors
+      %p
+        = @ensayo.errors.count
+        Prevented this recipe from saving
+      %ul
+        = @ensayo.errors.full_messages.each do |msg|
+          %li
+  .panel-body
+    = f.input :titlo, input_html: {class: 'form-control'}
+    = f.input :autor, input_html: {class: 'form-control'}
+    = f.input :pdf, input_html: {class: 'form-control'}
+  
+  = f.button :submit

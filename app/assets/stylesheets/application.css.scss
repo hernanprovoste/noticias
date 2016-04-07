@@ -167,6 +167,16 @@ div.titulo{
   font-size:20px;
 }
 
+.item-secciones a {
+  color: inherit;
+  background: transparent;
+}
+
+.item-secciones a:hover {
+  background-color: transparent;
+  text-decoration: none;
+}
+
 .item-secciones-noticias h3{
   font-size:20px;
   margin:0;

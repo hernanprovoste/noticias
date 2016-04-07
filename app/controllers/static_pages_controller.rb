@@ -6,6 +6,8 @@ class StaticPagesController < ApplicationController
 		@notices4 = Notice.last(3).reverse
 
 		@opinions = Opinion.all.order("created_at DESC").first(3)
+
+		@ensayos = Ensayo.all.order("created_at DESC").first(3)
 	end
 
 	def contactenos

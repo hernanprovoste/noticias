@@ -1,13 +1,42 @@
-%h1 Listing opinions
+.container
+  .col-md-12.no-padding
+    .imagenes-page
+      %h1 Opiniones
 
-%table
-  %thead
-    %tr
-      %th Title
-      %th Body
-      %th
-      %th
-      %th
+  .body-publicidad
+    .col-md-4
+      .publicidad
+        %a{:href => "#"}
+          %img.img-responsive{:src => "assets/img/prueba-9-fuze-tea.jpg"}/
+    .col-md-8
+      .row
+        - @opinions.each do |opinion|
+          .col-md-6
+            .body-ensayos
+              %h1= link_to opinion.title, opinion
+              %h3 Autor: Mauricio Lagos
+
+    .col-md-12
+      %nav
+        %ul.pagination
+          %li
+            %a{"aria-label" => "Previous"}
+              %span{"aria-hidden" => "true"} «
+          %li
+            %a 1
+          %li
+            %a 2
+          %li
+            %a 3
+          %li
+            %a 4
+          %li
+            %a 5
+          %li
+            %a{"aria-label" => "Next"}
+              %span{"aria-hidden" => "true"} »
+
+
 
   %tbody
     - @opinions.each do |opinion|

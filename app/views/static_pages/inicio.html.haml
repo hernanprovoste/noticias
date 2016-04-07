@@ -62,16 +62,13 @@
 
     .col-md-4.no-padding
       .links-documentos
-        %a{:href => "#"}
-          %strong Estrategia de Desarrollo Regional
+        %strong= link_to 'Estrategia de Desarrollo Regional', "../assets/documentos/estrategia-regional.pdf"
     .col-md-4.no-padding
       .links-documentos
-        %a{:href => "#"}
-          %strong Política de Turismo
+        %strong= link_to 'Política de Turismo', "../assets/documentos/LOS-RIOS-Politica-Cultural-Regional-2011-2016.pdf"
     .col-md-4.no-padding
       .links-documentos
-        %a{:href => "#"}
-          %strong Cultura
+        %strong= link_to 'Cultura', "../assets/documentos/POLÍTICA-REGIONAL-DE-TURISMO.pdf"
 
 .container
   .col-md-4
@@ -112,8 +109,8 @@
             - @opinions.each do |opinion|
               %ul
                 %li
-                  %h3= opinion.title
-                  %p= opinion.body
+                  %h3= link_to opinion.title, opinion
+                  %p= link_to opinion.body, opinion
           .ver-mas-botton
             %h3= link_to '.:: ver más ::.', opinions_path
       .col-md-4
@@ -121,19 +118,12 @@
           .titulo
             %h1 Publicaciones y Ensayos
           .item-secciones
-            %ul
-              %li
-                %h3 Los Guardianes de la Bahía
-                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.
-            %ul
-              %li
-                %h3 Mauricio Descubre la Via Láctea
-                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.
-            %ul
-              %li
-                %h3 El perrito tierno
-                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.
+            - @ensayos.each do |ensayo|
+              %ul
+                %li
+                  %h3= link_to ensayo.titlo, "../#{ensayo.pdf}"
+                  %h5= link_to ensayo.autor, "../#{ensayo.pdf}"
+                  %h5= link_to ensayo.created_at, "../#{ensayo.pdf}"
           .ver-mas-botton
-            %a{:href => "#"}
-              %h3 .:: ver más ::.
+            %h3= link_to '.:: ver más ::.', ensayos_path
 
