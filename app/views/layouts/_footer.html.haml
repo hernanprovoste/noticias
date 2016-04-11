@@ -5,14 +5,14 @@
         .col-md-4.col-sm-6.footer-navigation
           .logo-enfoque
             %a{:href => "#"}
-              %img.img-responsive{:src => "../assets/logo1blanco.png"}/
+              %img.img-responsive{:src => "../assets/logo_blanco.png"}/
           %h3
           %p.links
-            %a{:href => "#"} Inicio
+            = link_to "Inicio", root_path
             %strong ·
-            %a{:href => "#"} Quiénes Somos
+            = link_to "Quiénes Somos", somos_path
             %strong ·
-            %a{:href => "#"} Cantáctenos
+            = link_to "Contáctenos", contactenos_path
             %strong
           %p.company-name Enfoque Regional © 2016
         .col-md-4.col-sm-6.footer-contacts
@@ -31,7 +31,7 @@
         .col-md-4.footer-about
           %h4 Acerca de nuestra compañía
           %p
-            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+            Es un medio que comunicación de la Región de Los Ríos que tiene como finalidad ser una plataforma para diversos actores locales e instituciones puedan opinar y difundir sus actividades y publicaciones científicas con un enfoque regional.
           .social-links.social-icons
             %a{:href => "#"}
               %i.fa.fa-facebook

@@ -8,7 +8,7 @@
   .autor-detalle-noticia
     %h4 Autor: Pepito Rodriguez.
     %h5 Lago Ranco
-    %h5= @notice.date
+    %h5= @notice.created_at.to_formatted_s(:short)
   .redes-sociales-detalle-noticia
     %a.icon-button.twitter{:href => "#"}
       %i.fa.fa-twitter
@@ -26,4 +26,4 @@
       %i.fa.fa-instagram
       %span
   .cuerpo-detalle-noticia
-    %p= @notice.body
+    %p= raw @notice.body

@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :ensayos
   resources :opinions
-  resources :notices
+  resources :notices, only: [:index, :show]
+  namespace :admin do
+    resources :notices, only: [:new, :create, :edit, :update, :destroy]
+  end
   resources :welcomes
 
   get 'somos', to: 'static_pages#somos'

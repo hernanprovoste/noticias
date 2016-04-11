@@ -13,7 +13,7 @@
               %p.noticias-total-intro= notice.subtitle
               %p.noticias-total-calendario
                 %span.fa.fa-calendar.icon-noticia
-                  = notice.date
+                  = notice.created_at.to_formatted_s(:short)
 
   .row
     .col-md-12

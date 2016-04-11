@@ -1,12 +1,24 @@
-%p#notice= notice
-
-%p
-  %b Title:
-  = @opinion.title
-%p
-  %b Body:
-  = @opinion.body
-
-= link_to 'Edit', edit_opinion_path(@opinion)
-\|
-= link_to 'Back', opinions_path
+.container
+  .titulo-detalle-noticia
+    %h1= @opinion.title
+  .autor-detalle-noticia
+    %h4= @opinion.autor
+    %h5= @opinion.created_at.to_formatted_s(:short)
+  .redes-sociales-detalle-noticia
+    %a.icon-button.twitter{:href => "#"}
+      %i.fa.fa-twitter
+      %span
+    %a.icon-button.facebook{:href => "#"}
+      %i.fa.fa-facebook
+      %span
+    %a.icon-button.google-plus{:href => "#"}
+      %i.fa.fa-google-plus
+      %span
+    %a.icon-button.linkedin{:href => "#"}
+      %i.fa.fa-linkedin
+      %span
+    %a.icon-button.instagram{:href => "#"}
+      %i.fa.fa-instagram
+      %span
+  .cuerpo-detalle-noticia
+    %p= raw @opinion.body

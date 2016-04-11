@@ -69,6 +69,6 @@ class OpinionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def opinion_params
-      params.require(:opinion).permit(:title, :body)
+      params.require(:opinion).permit(:title, :body, :autor)
     end
 end

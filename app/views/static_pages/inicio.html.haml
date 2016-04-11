@@ -3,7 +3,7 @@
     .barrita-web
       %img.img-responsive{:src => "../assets/barrita-web.png"}/
 
-.container
+.container.hidden
   .col-md-12.no-padding
     .publicidad
       %a{:href => "#"}
@@ -42,7 +42,7 @@
             %a{:href => "#"}
               %span.zoom-caption
                 %small imagenes
-              %img{:src => "../assets/DSC00918.JPG"}/
+              %img{:src => "../assets/24230049310_661e498081_k.jpg"}/
         .podcast
           .audio-podcast
             %audio.control-audio-podcast{:controls => "", :preload => "none"}
@@ -70,7 +70,7 @@
       .links-documentos
         %strong= link_to 'Cultura', "../assets/documentos/POLÍTICA-REGIONAL-DE-TURISMO.pdf"
 
-.container
+.container.hidden
   .col-md-4
     .publicidad.no-padding
       %a{:href => "#"}
@@ -92,12 +92,15 @@
           .titulo
             %h1 Noticias
           .item-secciones-noticias
-            - @notices4.each do |notice|
-              %ul
-                %li
-                  = image_tag(notice.image.url, class: "img-responsive")
-                  %h3=link_to notice.title, notice
-                  %p=link_to notice.subtitle, notice
+            - if @notices4.size.zero?
+              %p No se encuentran noticias
+            - else
+              - @notices4.each do |notice|
+                %ul
+                  %li
+                    = image_tag(notice.image.url, class: "img-responsive")
+                    %h3=link_to notice.title, notice
+                    %p=link_to notice.subtitle, notice
 
           .ver-mas-botton
             %h3= link_to '.:: ver más ::.', notices_path
@@ -106,11 +109,14 @@
           .titulo
             %h1 Opiniones
           .item-secciones
-            - @opinions.each do |opinion|
-              %ul
-                %li
-                  %h3= link_to opinion.title, opinion
-                  %p= link_to opinion.body, opinion
+            - if @opinions.size.zero?
+              %p No se encuentran opiniones
+            - else
+              - @opinions.each do |opinion|
+                %ul
+                  %li
+                    %h3= link_to opinion.title, opinion
+                    %h5= link_to opinion.autor, opinion
           .ver-mas-botton
             %h3= link_to '.:: ver más ::.', opinions_path
       .col-md-4
@@ -118,12 +124,15 @@
           .titulo
             %h1 Publicaciones y Ensayos
           .item-secciones
-            - @ensayos.each do |ensayo|
-              %ul
-                %li
-                  %h3= link_to ensayo.titlo, "../#{ensayo.pdf}"
-                  %h5= link_to ensayo.autor, "../#{ensayo.pdf}"
-                  %h5= link_to ensayo.created_at, "../#{ensayo.pdf}"
+            - if @ensayos.size.zero?
+              %p No se encuentran ensayos
+            - else
+              - @ensayos.each do |ensayo|
+                %ul
+                  %li
+                    %h3= link_to ensayo.titlo, "../#{ensayo.pdf}"
+                    %h5= link_to ensayo.autor, "../#{ensayo.pdf}"
+                    %h5= link_to ensayo.created_at.to_formatted_s(:short), "../#{ensayo.pdf}"
           .ver-mas-botton
             %h3= link_to '.:: ver más ::.', ensayos_path
 

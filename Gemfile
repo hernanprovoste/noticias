@@ -52,6 +52,11 @@ gem 'simple_form', '~> 3.2'
 gem 'owlcarousel-rails'
 gem "paperclip", "~> 4.3"
 gem "font-awesome-rails"
+gem 'activeadmin'
+gem 'devise', '~> 3.5', '>= 3.5.6'
+gem 'rails-i18n', '~> 4.0.0' # For 4.0.x
+
+gem 'ckeditor', '~> 4.1', '>= 4.1.6'
 
 group :production do
 	gem 'pg'
