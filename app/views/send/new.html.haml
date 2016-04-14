@@ -1,0 +1,18 @@
+.container
+  .formulario-contacto
+    %h1 contactenos
+    = simple_form_for(@send) do |f|
+      f.input :nombre, placeholder: 'Nombre Completo', input_hmtl: {class: 'form-control'}
+      f.input :asunto, placeholder: 'Asunto Mensaje', input_hmtl: {class: 'form-control'}
+      f.input :email, placeholder: 'user@dominio.com', input_hmtl: {class: 'form-control'}
+      f.text :comentario, placeholder: 'Comentario', input_hmtl: {class: 'form-control'}
+      f.button :submit, input_html: {class: 'btn btn-default'}
+    
+    = simple_form_for(@send) do |f|
+      f.input.form-control{:name => "nombre", :placeholder => "Nombre Completo", :type => "text", :required => true}
+      f.input.form-control{:name => "asunto", :placeholder => "Asunto", :type => "text", :required => true}
+      f.input.form-control{:name => "email", :placeholder => "Email", :type => "email", :required => true}
+      f.textarea.form-control{:name => "texto_asunto", :placeholder => "Escriba su consulta", :required => true}
+      .hidden
+        f.input :nickname, :hint => 'leave this field blank'
+      f.button.btn.btn-default{:type => "submit"} Enviar

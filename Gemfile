@@ -58,7 +58,9 @@ gem 'rails-i18n', '~> 4.0.0' # For 4.0.x
 
 gem 'ckeditor', '~> 4.1', '>= 4.1.6'
 
+gem 'mail_form', '~> 1.5', '>= 1.5.1'
+
 group :production do
 	gem 'pg'
-	gem 'rails_12factor'
+	gem 'unicorn'
 end
