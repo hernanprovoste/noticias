@@ -12,6 +12,12 @@ set :passenger_restart_with_touch, true
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/home/deploy/noticias'
 
+# Defaults to [:web]
+set :assets_roles, [:web, :app]
+
+# If you need to touch public/images, public/javascripts, and public/stylesheets on each deploy
+set :normalize_asset_timestamps, %{public/images public/javascripts public/stylesheets}
+
 # Default value for :scm is :git
 # set :scm, :git
 
