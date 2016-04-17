@@ -23,6 +23,7 @@ module Noticias
     I18n.default_locale = :es
     I18n.reload!
 
+    config.assets.enabled = false
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
