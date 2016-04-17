@@ -130,9 +130,9 @@
               - @ensayos.each do |ensayo|
                 %ul
                   %li
-                    %h3= link_to ensayo.titlo, "../#{ensayo.pdf}"
-                    %h5= link_to ensayo.autor, "../#{ensayo.pdf}"
-                    %h5= link_to ensayo.created_at.to_formatted_s(:short), "../#{ensayo.pdf}"
+                    %h3= link_to ensayo.titlo, "#{ensayo.pdf}"
+                    %h5= link_to ensayo.autor, "#{ensayo.pdf}"
+                    %h5= link_to ensayo.created_at.to_formatted_s(:short), "#{ensayo.pdf}"
           .ver-mas-botton
             %h3= link_to '.:: ver más ::.', ensayos_path
 
