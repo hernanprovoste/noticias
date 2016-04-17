@@ -24,8 +24,6 @@ require 'capistrano/deploy'
  set :rbenv_type, :user # or :system, depends on your rbenv setup
  set :rbenv_ruby, '2.3.0'
 
- load 'deploy/assets'
-
 
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
