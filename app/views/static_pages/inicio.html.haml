@@ -1,7 +1,7 @@
 .container
   .col-md-12
     .barrita-web
-      %img.img-responsive{:src => "../assets/barrita-web.png"}/
+      = image_tag("barrita-web.png", class: "img-responsive")
 
 .container.hidden
   .col-md-12.no-padding
@@ -42,7 +42,7 @@
             %a{:href => "#"}
               %span.zoom-caption
                 %small imagenes
-              %img{:src => "../assets/24230049310_661e498081_k.jpg"}/
+              = image_tag("24230049310_661e498081_k.jpg")
         .podcast
           .audio-podcast
             %audio.control-audio-podcast{:controls => "", :preload => "none"}
