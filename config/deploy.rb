@@ -18,6 +18,11 @@ set :assets_roles, [:web, :app]
 # If you need to touch public/images, public/javascripts, and public/stylesheets on each deploy
 set :normalize_asset_timestamps, %{public/images public/javascripts public/stylesheets}
 
+# Defaults to nil (no asset cleanup is performed)
+# If you use Rails 4+ and you'd like to clean up old assets after each deploy,
+# set this to the number of versions to keep
+set :keep_assets, 2
+
 # Default value for :scm is :git
 # set :scm, :git
 
