@@ -51,6 +51,7 @@ group :development do
 	gem 'capistrano-rbenv', '~> 2.0', '>= 2.0.4'
   gem 'capistrano-passenger', '~> 0.2.0'
   gem 'capistrano-rails-collection'
+  gem 'capistrano-faster-assets', '~> 1.0'
 end
 
 gem 'haml-rails', '~> 0.9.0'

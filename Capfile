@@ -20,6 +20,8 @@ require 'capistrano/deploy'
  require 'capistrano/passenger'
  require 'capistrano/rails/collection'
  require "capistrano/rails/assets"
+ require 'capistrano/faster_assets'
+
 
  require 'capistrano/rbenv'
  set :rbenv_type, :user # or :system, depends on your rbenv setup
