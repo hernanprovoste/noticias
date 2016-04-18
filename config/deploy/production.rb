@@ -1,8 +1,6 @@
 set :stage, :production
 server '104.131.39.216', user: 'deploy', roles: %w{web app db}
 
-config.assets.compile = true
-
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
