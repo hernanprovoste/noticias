@@ -37,11 +37,12 @@
                 %li{"data-slide-to" => "1", "data-target" => "#carousel-1"}
                 %li{"data-slide-to" => "2", "data-target" => "#carousel-1"}
       .col-md-4
-        .imagenes-zoom-container
-          .zoom-container
-            %span.zoom-caption
-              %small= link_to 'imagenes de la semana', fotos_path
-            = image_tag(@ultima_foto.imagen)
+        - @ultima_foto.each do |foto|
+          .imagenes-zoom-container
+            .zoom-container
+              %span.zoom-caption
+                %small= link_to 'imagenes de la semana', fotos_path
+              = image_tag(foto.imagen.url)
         .podcast.hidden
           .audio-podcast
             %audio.control-audio-podcast{:controls => "", :preload => "none"}
