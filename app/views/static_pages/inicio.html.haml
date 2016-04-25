@@ -68,7 +68,7 @@
         %strong= link_to 'Política de Turismo', "../assets/documentos/POLÍTICA_REGIONAL_DE_TURISMO.pdf"
     .col-md-4.no-padding
       .links-documentos
-        %strong= link_to 'Cultura', "../assets/documentos/LOS_RIOS_Politica_Cultural_Regional_2011_2016.pdf"
+        %strong= link_to 'Política Cultural', "../assets/documentos/LOS_RIOS_Politica_Cultural_Regional_2011_2016.pdf"
 
 .container.hidden
   .col-md-4
@@ -83,7 +83,7 @@
     .publicidad.no-padding
       %a{:href => "#"}
         %img.img-responsive{:src => "../assets/publicidadPequena.png"}
-      
+
 %section
   .container
     .row
@@ -135,4 +135,3 @@
                     %h5= link_to ensayo.created_at.to_formatted_s(:short), "#{ensayo.pdf}"
           .ver-mas-botton
             %h3= link_to '.:: ver más ::.', ensayos_path
-
