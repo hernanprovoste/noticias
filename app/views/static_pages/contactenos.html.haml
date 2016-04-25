@@ -1,15 +1,10 @@
 .container
   .formulario-contacto
     %h1 contactenos
-    = simple_form_for(@welcome) do |f|
-      f.input :nombre, placeholder: 'Nombre Completo', input_hmtl: {class: 'form-control'}
-      f.input :asunto, placeholder: 'Asunto Mensaje', input_hmtl: {class: 'form-control'}
-      f.input :email, placeholder: 'user@dominio.com', input_hmtl: {class: 'form-control'}
-      f.text :comentario, placeholder: 'Comentario', input_hmtl: {class: 'form-control'}
-      f.button :submit, input_html: {class: 'btn btn-default'}
-    %form
-      %input.form-control{:name => "nombre", :placeholder => "Nombre Completo", :type => "text"}/
-      %input.form-control{:name => "asunto", :placeholder => "Asunto", :type => "text"}/
-      %input.form-control{:name => "email", :placeholder => "Email", :type => "email"}/
-      %textarea.form-control{:name => "texto-asunto", :placeholder => "Escriba su consulta"}
-      %button.btn.btn-default{:type => "submit"} Enviar
+    .ventas
+      %h2 ¿Deseas consultar temas relacionados con marketing y/o publicidad?. Realiza tus consultas a:
+      %h3 ventas@enfoqueregional.cl
+    .ventas
+      %h2 ¿Quieres publicar o dar tu opinión de algún tema en específico?. Realiza tus consultas a:
+      %h3 contacto@enfoqueregional.cl
+    

@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @foto.title
+%p
+  %b Subtitle:
+  = @foto.subtitle
+
+= link_to 'Edit', edit_foto_path(@foto)
+\|
+= link_to 'Back', fotos_path

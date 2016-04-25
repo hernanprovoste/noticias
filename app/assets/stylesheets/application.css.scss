@@ -296,6 +296,11 @@ div.carousel-inner{
   border-bottom:5px solid rgba(255, 255, 255, .15);
 }
 
+.zoom-container .zoom-caption small a {
+  color:#fff;
+  text-decoration: none;
+}
+
 .zoom-container:hover img{
   -webkit-transform:scale(1.25);
   -moz-transform:scale(1.25);
@@ -1070,4 +1075,61 @@ background-color: #dff0d8;
 border-color: #d6e9c6;
 color: #468847;
 text-align: left;
+}
+
+div.imagenes-fotos:hover{
+  background-color:#eee;
+}
+
+@media (max-width:991px) {
+  div.imagenes-fotos{
+    height:auto;
+  }
+}
+
+.imagenes-fotos-imagen{
+  width:100%;
+  margin-top:5px;
+  margin-bottom:15px;
+}
+
+.imagenes-fotos-titulo{
+  margin:0;
+  text-transform:uppercase;
+  text-align:left;
+  font-size:20px;
+  font-weight:bold;
+}
+
+p.imagenes-fotos-intro{
+  margin-top:10px;
+  text-align:left;
+}
+
+.imagenes-fotos a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.imagenes-fotos h3, p{
+  padding-left:5px;
+  padding-right:5px;
+}
+
+.ventas {
+  width: 100%;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.ventas h2 {
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.ventas h3 {
+  font-size: 20px;
+  font-style: italic;
+  padding-top: 10px;
 }

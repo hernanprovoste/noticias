@@ -8,6 +8,8 @@ class StaticPagesController < ApplicationController
 		@opinions = Opinion.all.order("created_at DESC").first(3)
 
 		@ensayos = Ensayo.all.order("created_at DESC").first(3)
+
+		@ultima_foto = Foto.last
 	end
 
 	def contactenos

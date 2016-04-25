@@ -1,0 +1,18 @@
+= simple_form_for @foto, html: { multipart: true } do |f|
+  - if @foto.errors.any?
+    #errors
+      %p
+        = @foto.errors.count
+        Prevented this recipe from saving
+      %ul
+        = @foto.errors.full_messages.each do |msg|
+          %li= msg
+  .panel-body
+    = f.label 'Título Fotografía'
+    = f.input :title, input_html: { class: 'form-control' }, label: false
+    = f.label 'Cuerpo Fotografía'
+    = f.input :subtitle, input_html: { class: 'form-control' }, label: false
+    = f.input :imagen, input_html: { class: 'form-control' }
+
+
+  = f.button :submit, class: "btn btn-primary"

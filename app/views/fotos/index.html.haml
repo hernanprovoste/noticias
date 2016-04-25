@@ -1,21 +1,18 @@
 .container
-  .col-md-12.no-padding
-    .imagenes-page
-      %h1 Noticias
-  .row
-    - @notices.each_slice(3) do |notices|
-      -notices.each do |notice|
+  .imagenes-page
+    %h1 imágenes de la semana
+    - @fotos.each_slice(2) do |fotos|
+      -fotos.each do |foto|
         .col-md-6
-          .noticias-total
-            = link_to notice do
-              = image_tag(notice.image.url, class: "img-responsive noticias-total-imagen")
-              %h3.noticias-total-titulo= notice.title
-              %p.noticias-total-intro= notice.subtitle
+          .imagenes-fotos
+            .imagen-muestra
+              = image_tag(foto.imagen.url, class: "img-responsive")
+              %h1= foto.title
+              %p= foto.subtitle
               %p.noticias-total-calendario
                 %span.fa.fa-calendar.icon-noticia
-                  = notice.created_at.to_formatted_s(:short)
-
-  .row.hidden
+                  = foto.created_at.to_formatted_s(:short)
+  %div.hidden
     .col-md-12
       %nav
         %ul.pagination

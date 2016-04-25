@@ -35,7 +35,7 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.10'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem 'byebug', '~> 8.2', '>= 8.2.4'
 end
 
 group :development do
@@ -63,6 +63,7 @@ gem "font-awesome-rails"
 gem 'activeadmin'
 gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'rails-i18n', '~> 4.0.0' # For 4.0.x
+gem 'activesupport'
 
 gem 'ckeditor', '~> 4.1', '>= 4.1.6'
 

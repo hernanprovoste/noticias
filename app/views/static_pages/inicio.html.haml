@@ -39,11 +39,10 @@
       .col-md-4
         .imagenes-zoom-container
           .zoom-container
-            %a{:href => "#"}
-              %span.zoom-caption
-                %small imagenes
-              = image_tag("24230049310_661e498081_k.jpg")
-        .podcast
+            %span.zoom-caption
+              %small= link_to 'imagenes de la semana', fotos_path
+            = image_tag(@ultima_foto.imagen)
+        .podcast.hidden
           .audio-podcast
             %audio.control-audio-podcast{:controls => "", :preload => "none"}
               %source{:src => "{$base_url}audio/pitbull.mp3", :type => "audio/mpeg"}
@@ -51,7 +50,7 @@
           .letras-podcast
             %h3 Entrevista de la Semana
             %p Entrevista a María Ines de los Andes, Jefa de Recursos Humanos de Buenaventura Corporations.
-        .ver-mas-botton
+        .ver-mas-botton.hidden
           %a{:href => "#"}
             %h3 .:: ver más ::.
 
