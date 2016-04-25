@@ -6,8 +6,6 @@
   .previus-detalle-noticia
     %h3= @notice.subtitle
   .autor-detalle-noticia
-    %h4 Autor: Pepito Rodriguez.
-    %h5 Lago Ranco
     %h5= @notice.created_at.to_formatted_s(:short)
   .redes-sociales-detalle-noticia
     %a.icon-button.twitter{:href => "#"}
