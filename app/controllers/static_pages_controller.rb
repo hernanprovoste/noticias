@@ -9,7 +9,7 @@ class StaticPagesController < ApplicationController
 
 		@ensayos = Ensayo.all.order("created_at DESC").first(3)
 
-		@ultima_foto = Foto.last
+		@fotos = Foto.all.last(1)
 	end
 
 	def contactenos
