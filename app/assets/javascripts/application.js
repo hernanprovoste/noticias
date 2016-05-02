@@ -15,6 +15,7 @@
 //= require bootstrap-sprockets
 //= require ckeditor/init
 //= require turbolinks
+//= require google_analytics
 //= require_tree .
 
 var someJavascriptStuff = {};
