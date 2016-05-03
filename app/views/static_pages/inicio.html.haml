@@ -46,6 +46,9 @@
                 %span.zoom-caption
                   %small= link_to 'imagenes de la semana', fotos_path
                 = image_tag(foto.imagen.url)
+              .imagen-muestra
+                %h1= foto.title
+                %p= foto.subtitle
         .podcast.hidden
           .audio-podcast
             %audio.control-audio-podcast{:controls => "", :preload => "none"}
@@ -63,15 +66,18 @@
     .titulo
       %h1 Documentos Regionales
 
-    .col-md-4.no-padding
+    .col-md-3.no-padding
       .links-documentos
         %strong= link_to 'Estrategia de Desarrollo Regional', "../assets/documentos/estrategia_regional.pdf"
-    .col-md-4.no-padding
+    .col-md-3.no-padding
       .links-documentos
         %strong= link_to 'Política de Turismo', "../assets/documentos/POLÍTICA_REGIONAL_DE_TURISMO.pdf"
-    .col-md-4.no-padding
+    .col-md-3.no-padding
       .links-documentos
         %strong= link_to 'Política Cultural', "../assets/documentos/LOS_RIOS_Politica_Cultural_Regional_2011_2016.pdf"
+    .col-md-3.no-padding
+      .links-documentos
+        %strong= link_to 'Política Regional de Desarrollo Pesquero y Acuícola', "../assets/documentos/RESUMEN-EJECUTIVO_PRDPA-LOS-RIOS3.pdf"
 
 .container.hidden
   .col-md-4
