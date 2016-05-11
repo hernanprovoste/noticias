@@ -117,13 +117,14 @@
         .secciones
           .titulo
             %h1 Opiniones
-          .item-secciones
+          .item-secciones-noticias
             - if @opinions.size.zero?
               %p No se encuentran opiniones
             - else
               - @opinions.each do |opinion|
                 %ul
                   %li
+                    = image_tag(opinion.image.url, class: "img-responsive")
                     %h3= link_to opinion.title, opinion
                     %h5= link_to opinion.autor, opinion
           .ver-mas-botton

@@ -21,8 +21,9 @@ ActiveAdmin.register Opinion do
 			input :title, label: "Título Opinión"
 			input :autor, label: "Autor"
 			input :body, label: "Texto Opinión", :as => :ckeditor
+			input :image, label: "Imagen Autor"
 		end
-		
+
 		f.submit "Guardar Opinión"
 	end
 
@@ -31,6 +32,9 @@ ActiveAdmin.register Opinion do
 		panel "Detalle Opinión" do
 			h3 opinion.title
 			h4 opinion.autor
+			div class: 'imagen-muestra-admin' do
+				image_tag opinions.image
+			end
 			div do
 				simple_format opinion.body
 			end
