@@ -33,7 +33,7 @@ ActiveAdmin.register Opinion do
 			h3 opinion.title
 			h4 opinion.autor
 			div class: 'imagen-muestra-admin' do
-				image_tag opinions.image
+				image_tag opinion.image
 			end
 			div do
 				simple_format opinion.body
