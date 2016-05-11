@@ -10,7 +10,7 @@ ActiveAdmin.register Opinion do
 	end
 
 	# Opciones para que se envpien los parámetros al controlador
-	permit_params :title, :body, :autor
+	permit_params :title, :body, :autor, :image
 
 	# Opciones del menú
 	menu label: "Opiniones"
