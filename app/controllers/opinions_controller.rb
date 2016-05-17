@@ -10,6 +10,7 @@ class OpinionsController < ApplicationController
   # GET /opinions/1
   # GET /opinions/1.json
   def show
+    @notices4 = Notice.last(3).reverse
   end
 
   # GET /opinions/new

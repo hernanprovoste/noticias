@@ -8,10 +8,12 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Asap:400,700);
+@import "social-share-button";
 
 
 body{
-  font-family:Tahoma, Geneva, sans-serif;
+  font-family: 'Asap', sans-serif;;
   font-size:14px;
   line-height:1.42857143;
   color:#333;
@@ -443,6 +445,9 @@ ul.pagination{
   .imagen-detalle-noticia{
     height:auto;
   }
+  .titulo-detalle-noticia {
+    margin-top: 10px;
+  }
 }
 
 .imagen-detalle-noticia img{
@@ -452,13 +457,13 @@ ul.pagination{
 .titulo-detalle-noticia{
   width:100%;
   text-transform:uppercase;
-  font-style:italic;
+  //font-style:italic;
   margin-bottom:10px;
 }
 
 .titulo-detalle-noticia h1{
   font-weight:bold;
-  font-size:35px;
+  font-size:30px;
   padding:0;
   margin:0;
 }
@@ -596,14 +601,14 @@ ul.pagination{
   width:100%;
   margin-top:10px;
   margin-bottom:20px;
-  padding-left:25px;
-  padding-right:25px;
+  //padding-left:25px;
+  //padding-right:25px;
 }
 
 .cuerpo-detalle-noticia p{
   text-align:justify;
   line-height:1.5;
-  font-size:20px;
+  font-size:16px;
 }
 
 body{

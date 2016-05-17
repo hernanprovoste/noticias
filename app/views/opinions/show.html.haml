@@ -1,24 +1,38 @@
 .container
-  .titulo-detalle-noticia
-    %h1= @opinion.title
-  .autor-detalle-noticia
-    %h4= @opinion.autor
-    %h5= @opinion.created_at.to_formatted_s(:short)
-  .redes-sociales-detalle-noticia
-    %a.icon-button.twitter{:href => "#"}
-      %i.fa.fa-twitter
-      %span
-    %a.icon-button.facebook{:href => "#"}
-      %i.fa.fa-facebook
-      %span
-    %a.icon-button.google-plus{:href => "#"}
-      %i.fa.fa-google-plus
-      %span
-    %a.icon-button.linkedin{:href => "#"}
-      %i.fa.fa-linkedin
-      %span
-    %a.icon-button.instagram{:href => "#"}
-      %i.fa.fa-instagram
-      %span
-  .cuerpo-detalle-noticia
-    %p= raw @opinion.body
+  .row
+    .col-md-2
+      = image_tag(@opinion.image.url, class: "img-responsive")
+    .col-md-10
+      .titulo-detalle-noticia
+        %h1= @opinion.title
+      .autor-detalle-noticia
+        %h4= @opinion.autor
+        %h5= @opinion.created_at.to_formatted_s(:short)
+      .redes-sociales-detalle-noticia.hidden
+        %a.icon-button.twitter{:href => "#"}
+          %i.fa.fa-twitter
+          %span
+        %a.icon-button.facebook{:href => "#"}
+          %i.fa.fa-facebook
+          %span
+  .row
+    .col-md-8
+      .cuerpo-detalle-noticia
+        %p= raw @opinion.body
+    .col-md-4
+      .secciones
+        .titulo
+          %h1 Noticias
+        .item-secciones-noticias
+          - if @notices4.size.zero?
+            %p No se encuentran noticias
+          - else
+            - @notices4.each do |notice|
+              %ul
+                %li
+                  = image_tag(notice.image.url, class: "img-responsive")
+                  %h3=link_to notice.title, notice
+                  %p=link_to notice.subtitle, notice
+
+        .ver-mas-botton
+          %h3= link_to '.:: ver más ::.', notices_path

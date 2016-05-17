@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require ckeditor/init
+//= require social-share-button
 //= require turbolinks
 //= require google_analytics
 //= require_tree .
