@@ -1,17 +1,28 @@
 .container
   .imagenes-page
     %h1 imágenes de la semana
-    - @fotos.each_slice(2) do |fotos|
-      -fotos.each do |foto|
-        .col-md-6
-          .imagenes-fotos
-            .imagen-muestra
-              = image_tag(foto.imagen.url, class: "img-responsive")
-              %h1= foto.title
-              %p= foto.subtitle
-              %p.noticias-total-calendario
-                %span.fa.fa-calendar.icon-noticia
-                  = foto.created_at.to_formatted_s(:short)
+  .gallery
+    %ul
+      - @fotos.each do |foto|
+        %li.each
+          = image_tag(foto.imagen.url, class: "img-responsive")
+          %span.caption
+            %h2= foto.title
+            %p= foto.subtitle
+      .direction
+        %span.next +
+
+    /- @fotos.each_slice(2) do |fotos|
+    /  -fotos.each do |foto|
+    /    .col-md-6
+    /      .imagenes-fotos
+    /        .imagen-muestra
+    /          = image_tag(foto.imagen.url, class: "img-responsive")
+    /          %h1= foto.title
+    /          %p= foto.subtitle
+    /          %p.noticias-total-calendario
+    /            %span.fa.fa-calendar.icon-noticia
+    /              = foto.created_at.to_formatted_s(:short)
   %div.hidden
     .col-md-12
       %nav

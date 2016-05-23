@@ -8,7 +8,8 @@
         .col-md-6
           .noticias-total
             = link_to notice do
-              = image_tag(notice.image.url, class: "img-responsive noticias-total-imagen")
+              .imagen_noticia
+                = image_tag(notice.image.url, class: "img-responsive noticias-total-imagen")
               %h3.noticias-total-titulo= notice.title
               %p.noticias-total-intro= notice.subtitle
               %p.noticias-total-calendario

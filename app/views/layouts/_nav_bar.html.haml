@@ -2,8 +2,8 @@
   .container
     .col-md-5.col-sm-12.col-xs-9
       .logos
-        = image_tag("logo_definitivo.png", class: "img-responsive logoLetras")
-    .col-md-7.col-sm-12
+        =link_to image_tag("logo_definitivo.png", class: "img-responsive logoLetras"), root_path
+    .col-md-7.col-sm-12.no-padding
       .barra-menu
         %nav.navbar.navbar-default
           .container-fluid

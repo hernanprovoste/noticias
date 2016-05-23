@@ -6,4 +6,6 @@ class Opinion < ActiveRecord::Base
   	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   	validates :title, :body, :autor, :image, presence: true
+
+    permalink :title, to_param: %w(id title)
 end

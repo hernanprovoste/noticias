@@ -57,6 +57,8 @@ nav.navbar.navbar-default{
   border-radius:0px;
   background:transparent;
   box-shadow:none;
+  margin: 15px 0;
+  float: right;
 }
 
 div#navcol-1.collapse.navbar-collapse{
@@ -65,25 +67,22 @@ div#navcol-1.collapse.navbar-collapse{
 }
 
 ul.nav.navbar-nav.navbar-right{
-  padding-top:10px;
+  //padding-top:10px;
   position:relative;
 }
 
 div#navcol-1.collapse.navbar-collapse ul > li{
   display:inline-block;
-  border-top:6px solid rgba(0,0,0,0);
-  height:51px;
-  line-height:51px;
+  border-top:2px solid rgba(0,0,0,0);
   position:relative;
-  top:-15px;
 }
 
 div#navcol-1.collapse.navbar-collapse ul > li:hover{
-  border-top:6px solid #186fb6;
+  border-top:2px solid #186fb6;
 }
 
 div.barra-menu{
-  padding-top:20px;
+  padding-top:0px;
 }
 
 @media (max-width:767px) {
@@ -93,7 +92,7 @@ div.barra-menu{
 }
 
 ul.nav.navbar-nav{
-  float:right;
+  float:left;
 }
 
 a.left.carousel-control{
@@ -119,7 +118,7 @@ div.imagenes{
 div.secciones{
   width:100%;
   height:auto;
-  padding-top:10px;
+  //padding-top:10px;
   padding-bottom:5px;
 }
 
@@ -445,8 +444,13 @@ ul.pagination{
   .imagen-detalle-noticia{
     height:auto;
   }
+
   .titulo-detalle-noticia {
     margin-top: 10px;
+  }
+
+  div.secciones{
+    padding-top:10px;
   }
 }
 
@@ -694,14 +698,14 @@ body{
 
 @media (max-width:991px) {
   .item h1{
-    bottom:120px;
+    top: 250px;
   }
 }
 
 @media (max-width:767px) {
   .item h1{
-    bottom:40px;
-    font-size:20px;
+    top:150px;
+    font-size:14px;
   }
 }
 
@@ -1161,4 +1165,169 @@ p.imagenes-fotos-intro{
 
 .imagen-hoy-content p{
   margin-top:10px;
+}
+
+.carousel-control.left
+{
+	background: none;
+}
+.carousel-control.right
+{
+	background: none;
+}
+
+.carousel-control
+{
+	position: absolute;
+	top: 45%;
+	bottom: 0;
+	left: 0;
+	width: 15%;
+	font-size: auto;
+	color: #fff;
+	text-align: center;
+	opacity: 1;
+	text-shadow: none;
+}
+.carousel-control:hover
+{
+	color: #000;
+}
+.carousel-indicators
+{
+	bottom: -50px;
+}
+.carousel-indicators li
+{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 1px;
+	text-indent: -999px;
+	cursor: pointer;
+	background-color: #000\9;
+	background-color: rgba(0,0,0,0);
+	border: 1px solid #16a085;
+	border-radius: 50%;
+}
+.carousel-indicators .active
+{
+	width: 12px;
+	height: 12px;
+	margin: 0;
+	background-color: #16a085;
+}
+.carousel-caption
+{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #fff;
+	text-align: center;
+	background: rgba(0,0,0,0.4);
+}
+
+.carousel-inner .item {
+  max-height: 412px;
+  overflow: hidden;
+}
+
+.carousel {
+  margin-bottom: 10px;
+}
+
+.imagen_noticia {
+  width: 100%;
+  max-height: 294px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+/*Gallery */
+
+/* Gallery */
+.gallery {
+	position: relative;
+	width: 100%;
+  height: auto;
+	margin: auto;
+	overflow: hidden;
+	list-style: none;
+}
+.gallery img {
+	display: block;
+  width: 100%;
+}
+.gallery ul {
+	list-style: none;
+}
+.gallery ul li.each {
+	position: relative;
+	float: left;
+	transition: all .8s;
+}
+.gallery ul li.each, .gallery ul li.each img {
+	height: 0px;
+}
+.gallery ul li.each img {
+	opacity: 0.5;
+	transition: all 1s;
+}
+.gallery ul li.each.active, .gallery ul li.each.active img {
+	height: auto;
+}
+.gallery ul li.each.active img {
+	opacity: 1;
+}
+.gallery .caption {
+	position: absolute;
+	bottom: 0;
+	left: 20px; right: 20px;
+	text-transform: uppercase;
+}
+
+.gallery .caption h2, .gallery .caption p {
+	background: #fff000;
+	padding: 7px;
+  box-shadow: 0 0 20px #000;
+}
+.gallery .caption h2 {
+	font-size: 24px;
+	float: left;
+}
+.gallery .caption p {
+	font-size: 18px;
+	float: left;
+  clear: both;
+}
+
+/* Direction */
+.direction {
+	position: absolute;
+	top: 50%; margin-top: -74px;
+	right: -100px;
+	background: #fff000;
+	width: 158px; height: 158px;
+	display: block;
+	transform: rotate(45deg);
+  z-index: 9999;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+}
+.direction .next {
+	position: absolute;
+	top: 90px; left: 25px;
+	color: #ededed;
+	font: 40px "Lato", sans-serif;
+	text-shadow:
+		0 1px #000,
+		0 2px #ccc,
+		0 3px #ccc,
+		0 4px #ccc,
+		0 5px #ccc;
+	transform: rotate(-45deg);
+	cursor: pointer;
 }

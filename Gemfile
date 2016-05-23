@@ -70,6 +70,7 @@ gem 'ckeditor', '~> 4.1', '>= 4.1.6'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 
 gem 'social-share-button', '~> 0.2.1'
+gem 'permalink', '~> 2.0'
 
 group :production do
 	gem 'pg'
