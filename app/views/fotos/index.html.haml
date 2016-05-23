@@ -3,12 +3,19 @@
     %h1 imágenes de la semana
   .gallery
     %ul
-      - @fotos.each do |foto|
-        %li.each
-          = image_tag(foto.imagen.url, class: "img-responsive")
-          %span.caption
-            %h2= foto.title
-            %p= foto.subtitle
+      - @fotos.each_with_index do |foto, index|
+        - if index.zero?
+          %li.each
+            = image_tag(foto.imagen.url, class: "img-responsive")
+            %span.caption
+              %h2= foto.title
+              %p= foto.subtitle
+        - else
+          %li.each
+            = image_tag(foto.imagen.url, class: "img-responsive")
+            %span.caption
+              %h2= foto.title
+              %p= foto.subtitle
       .direction
         %span.next +
 
