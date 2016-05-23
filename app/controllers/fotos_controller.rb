@@ -1,5 +1,7 @@
 class FotosController < InheritedResources::Base
-
+  def index
+    @fotos = Foto.all.order("created_at DESC")
+  end
   private
 
     def foto_params
