@@ -7,5 +7,5 @@ class Opinion < ActiveRecord::Base
 
   	validates :title, :body, :autor, :image, presence: true
 
-    permalink :title, to_param: %w(id title)
+    
 end

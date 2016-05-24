@@ -8,5 +8,5 @@ class Notice < ActiveRecord::Base
 
   	validates :title, :subtitle, :body, :image, presence: true
 
-	permalink :title, to_param: %w(id title)
+	
 end
